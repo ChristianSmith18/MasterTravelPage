@@ -1,0 +1,105 @@
+<div class="uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small uk-grid-match" style="padding: 8px;" uk-grid>
+  <div class="uk-animation-slide-left">
+    <div class="uk-card uk-card-0 uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fas fa-hand-holding-usd"></i> CLP ${{ (dolarObservado + '').replace('.', ',') }}
+      </h3>
+      <p>Dolar Observado ({{day}}-{{month}}-{{year}})</p>
+    </div>
+  </div>
+  <div class="uk-animation-slide-top">
+    <div class="uk-card uk-card-1 uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fas fa-user-friends"></i> {{ visitasData }} usuarios
+      </h3>
+      <p>Han visitado <span class="bold">Master Travel</span></p>
+    </div>
+  </div>
+  <div class="uk-animation-slide-right">
+    <div class="uk-card uk-card-insta uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fab fa-instagram"></i> {{ instagramData }} personas
+      </h3>
+      <p>Han visitado nuestro <span class="bold">Instagram</span></p>
+    </div>
+  </div>
+  <div class="uk-animation-slide-left">
+    <div class="uk-card uk-card-2 uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fas fa-user-friends"></i> {{ visitasContactoData }} usuarios
+      </h3>
+      <p>Han ingresado a <span class="bold">Contacto</span></p>
+    </div>
+  </div>
+  <div class="uk-animation-scale-up">
+    <div class="uk-card uk-card-face uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fab fa-facebook"></i> {{ facebookData }} personas
+      </h3>
+      <p>Han visitado nuestro <span class="bold">Facebook</span></p>
+    </div>
+  </div>
+  <div class="uk-animation-slide-right">
+    <div class="uk-card uk-card-3 uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fas fa-user-friends"></i> {{ visitasOtrosData }} usuarios
+      </h3>
+      <p>Han ingresado a <span class="bold">Otros Destinos</span></p>
+    </div>
+  </div>
+  <div class="uk-animation-slide-left">
+    <div class="uk-card uk-card-twit uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fab fa-twitter"></i> {{ twitterData }} personas
+      </h3>
+      <p>Han visitado nuestro <span class="bold">Twitter</span></p>
+    </div>
+  </div>
+  <div class="uk-animation-slide-bottom">
+    <div class="uk-card uk-card-4 uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fas fa-user-friends"></i> {{ visitasSalidasData }} usuarios
+      </h3>
+      <p>Han ingresado a <span class="bold">Salidas Confirmadas</span></p>
+    </div>
+  </div>
+  <div class="uk-animation-slide-right">
+    <div class="uk-card uk-card-whats uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fab fa-whatsapp"></i> {{ whatsappData }} usuarios
+      </h3>
+      <p>Nos han contactado a través de <span class="bold">Whatsapp</span></p>
+    </div>
+  </div>
+</div>
+
+<a href="#mantencion-page" uk-toggle>
+  <div class="uk-text-center uk-animation-shake card-panic">
+    <div class="uk-card uk-card-panic uk-card-body uk-text-center">
+      <h3 class="uk-card-title" style="font-weight: bold;">
+        <i class="fas fa-exclamation-triangle"></i> Poner página en mantención
+      </h3>
+      <p>Este modo se encuentra <span class="bold"><span *ngIf="!mantencionMode">desactivado</span><span
+            *ngIf="mantencionMode">activado</span></span></p>
+    </div>
+  </div>
+</a>
+
+<div id="mantencion-page" class="uk-flex-top" uk-modal>
+  <div class="uk-modal-dialog uk-margin-auto-vertical">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title"><span *ngIf="!mantencionMode">Poner</span><span *ngIf="mantencionMode">Quitar</span>
+        página en mantención</h2>
+    </div>
+    <div class="uk-modal-body uk-text-center">
+      <h4>¿Estás realmente seguro?</h4>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-primary uk-modal-close" type="button"
+        style="border-radius: 1.2rem; margin-right: 10px;" (click)="setMantencionMode()">Si</button>
+      <button class="uk-button uk-button-default uk-modal-close" type="button"
+        style="border-radius: 1.2rem;">No</button>
+    </div>
+  </div>
+</div>

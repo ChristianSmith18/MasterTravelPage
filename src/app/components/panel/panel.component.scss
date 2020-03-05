@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+
+.uk-card {
+  height: 100vh !important;
+  width: 270px !important;
+  // min-width: 270px;
+}
+
+.fake-nav {
+  height: 100vh !important;
+  width: 21vw !important;
+  min-width: 270px;
+}
+
+div {
+  img {
+    border-radius: 50%;
+    width: 80%;
+    margin-left: -50px;
+    margin-top: -18px;
+  }
+
+  p {
+    width: 160px;
+    font-size: 1.35rem;
+    margin-left: -45px;
+    font-family: 'Calistoga', cursive;
+  }
+}
+
+button.uk-button-danger {
+  font-size: .7rem;
+  border-radius: 1.2rem;
+  min-width: 190px;
+  margin-left: -1vw;
+}
+
+#offcanvas-overlay {
+  li:last-child {
+    margin-top: 150px;
+  }
+}
+
+.uk-offcanvas-bar {
+  max-width: 260px !important;
+  min-width: 255px !important;
+  padding: 5px 20px !important;
+}
+
+button.uk-button-default {
+  position: fixed;
+  color: white;
+  top: 0;
+  right: 0;
+}
+
+#desktop-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 850px) {
+
+  #desktop-menu,
+  .fake-nav {
+    display: none;
+  }
+
+  div {
+    img {
+      margin: 10px 0;
+    }
+  }
+}
+
+@media (min-width: 851px) {
+
+  #mobile-menu,
+  #offcanvas-overlay {
+    display: none;
+  }
+}
+
+.uk-badge {
+  background: #06d755;
+}
+
+.item-active {
+  color: #000 !important;
+}
+

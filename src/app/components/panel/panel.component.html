@@ -1,0 +1,89 @@
+<div id="desktop-menu" class="uk-card uk-card-default uk-card-body uk-width-1-2@s">
+  <ul class="uk-nav-primary uk-nav-parent-icon" uk-nav>
+    <li class="uk-active"><a href="#">
+        <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+          <div>
+            <img src="../../../assets/img/logo/logo_mastertravel.jpeg" alt="">
+          </div>
+          <div>
+            <p>Master Travel</p>
+          </div>
+        </div>
+      </a></li>
+    <li id="dashboard" class="uk-active"><a (click)="setShowApp(1)"><span class="uk-margin-small-right"
+          uk-icon="icon: thumbnails"></span>
+        Dashboard</a></li>
+    <li class="uk-nav-divider"></li>
+    <li id="mensajes"><a (click)="setShowApp(2)"><span class="uk-margin-small-right" uk-icon="icon: mail"></span>
+        Mensajes <div *ngIf="msgUnread !== 0" class="uk-badge">
+          {{ msgUnread }}
+        </div></a></li>
+    <li class="uk-nav-divider"></li>
+
+
+    <li class="uk-parent">
+      <a href="#"><span class="uk-margin-small-right" uk-icon="icon: album"></span> Paquetes</a>
+      <ul class="uk-nav-sub">
+        <li id="paquete"><a (click)="setShowApp(3)"><span class="uk-margin-small-right" uk-icon="icon: pencil"></span>
+            Crear Paquete</a></li>
+        <li id="listado"><a (click)="setShowApp(4)"><span class="uk-margin-small-right" uk-icon="icon: list"></span> Ver
+            Listado</a></li>
+      </ul>
+    </li>
+
+    <button class="uk-button uk-button-danger" (click)="signOut()" style="position: fixed;bottom: 25px;left: 45px;">
+      <span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Cerrar Sesión
+    </button>
+  </ul>
+</div>
+<div class="fix-panel" style="display: inline-flex;">
+  <div class="fake-nav"></div>
+  <div class="container-panel">
+    <app-dashboard *ngIf="dashboard"></app-dashboard>
+    <app-mensajes *ngIf="mensajes"></app-mensajes>
+    <app-paquetes *ngIf="paquetes"></app-paquetes>
+  </div>
+</div>
+
+
+<div *ngIf="spinner" class="spinner-bg uk-text-center" style="top: 0;">
+  <div uk-spinner="ratio: 2"></div>
+</div>
+
+<button id="mobile-menu" class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay;"
+  style="background-color: white;color: black;">
+  <span uk-icon="icon: menu"></span> Menú
+</button>
+
+<div id="offcanvas-overlay" uk-offcanvas="overlay: true;mode: push" style="width: 260px;">
+  <div class="uk-offcanvas-bar">
+
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+
+    <div style="margin-top: 45px;">
+      <ul class="uk-nav-primary uk-nav-parent-icon" uk-nav>
+        <li><a href="#">
+            <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+              <div>
+                <img src="../../../assets/img/logo/logo_mastertravel.jpeg" alt="">
+              </div>
+            </div>
+          </a></li>
+        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Dashboard</a></li>
+        <li class="uk-nav-divider"></li>
+        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: mail"></span> Mensajes <div
+              *ngIf="msgUnread !== 0" class="uk-badge">
+              {{ msgUnread }}
+            </div></a></li>
+        <li class="uk-nav-divider"></li>
+        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: pencil"></span> Paquetes</a></li>
+        <li class="uk-text-center" style="margin-top: 10vh;">
+          <button class="uk-button uk-button-danger" (click)="signOut()">
+            <span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>Cerrar Sesión
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

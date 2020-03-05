@@ -1,0 +1,59 @@
+<div class="uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small " style="width: 80vw;
+width: calc(100vw - 280px);" uk-grid>
+  <div *ngFor="let mensaje of mensajes; let i = index">
+    <div class="uk-card uk-card-default uk-card-body">
+      <div *ngIf="!(mensaje.visto)" class="circle-red" uk-tooltip="title: Mensaje sin leer; pos: right"></div>
+      <div class="uk-card-header">
+        <h3 class="uk-card-title">
+          <div class="name">
+            <i class="fas fa-user-tie"></i> {{ mensaje.nombre.split(' ')[0] }}
+          </div>
+          <div class="date">
+            <i class="fas fa-calendar-minus"></i> {{ mensaje.fecha }}
+          </div>
+        </h3>
+      </div>
+      <div class="uk-card-body uk-text-center">
+        <button class="uk-button uk-button-secondary uk-button-small" (click)="readMsg(i)">Leer Mensaje</button>
+      </div>
+      <div class="uk-card-footer">
+        <div class="email">
+          <i class="far fa-envelope"></i>&nbsp;<a [href]="'mailto:'+mensaje.email">{{ mensaje.email }}</a>
+        </div>
+        <div class="phone">
+          <div *ngIf="ancho >= 420">
+            <i class="fas fa-phone-alt"></i>&nbsp;<a
+              [href]="'https://wa.me/'+mensaje.numeroTelefonico.replace('+', '')">{{ mensaje.numeroTelefonico }}</a>
+          </div>
+          <div *ngIf="!(ancho >= 420)">
+            <i class="fas fa-phone-alt"></i>&nbsp;<a
+              [href]="'tel:'+mensaje.numeroTelefonico">{{ mensaje.numeroTelefonico }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="my-modal" uk-modal>
+  <div class="uk-modal-dialog">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Mensaje de {{ mensajes[lectura].nombre }}</h2>
+    </div>
+    <div class="uk-modal-body">
+      <p>{{ mensajes[lectura].mensaje }}</p>
+      <p *ngIf="mensajes[lectura].empresa" class="uk-text-bold">
+        <i class="far fa-building"></i> {{ mensajes[lectura].empresa }}
+      </p>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button id="unReadBtn" *ngIf="mensajes[lectura].visto" class="uk-button uk-button-secondary" type="button"
+        (click)="unRead()" style="float: left;">Marcar como no leído</button>
+      <button class="uk-button uk-button-primary" type="button" (click)="sendEmail()">Responder</button>
+      <button class="uk-button uk-button-default uk-modal-close" type="button">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="wea"></div> -->

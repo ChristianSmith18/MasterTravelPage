@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+
+h1,
+h3,
+h4 {
+  font-family: 'Calistoga', cursive;
+}
+
+p {
+  padding: 0 20px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 960px) {
+  .master-travel-desktop {
+    display: none;
+  }
+
+  .width-100 {
+    width: 100%;
+  }
+
+  p {
+    padding: 0 40px;
+  }
+}
+
+.mesa-central-mobile {
+  margin-bottom: -15px;
+  margin-top: 10px;
+}
+
+@media (min-width: 961px) {
+  .master-travel-mobile {
+    display: none;
+  }
+
+  .mesa-central-mobile {
+    display: none;
+  }
+}
+
+@media(min-width: 450px) {
+  .div-extend {
+    margin-right: -50px;
+    margin-left: -20px;
+  }
+
+  .horizontal-margin {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,65 @@
+<div *ngIf="!autenticado" class="login-container">
+  <div class="login-bg">
+    <div class="login-title">
+      <h1 class="uk-text-center">Master Travel Admin</h1>
+    </div>
+    <div class="login-inputs uk-text-center">
+
+      <div class="uk-margin">
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: user"></span>
+          <input [(ngModel)]="correo" class="uk-input" type="email" placeholder="Correo electrónico" autocomplete="on">
+        </div>
+      </div>
+
+      <div class="uk-margin">
+        <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: lock"></span>
+          <a class="uk-form-icon uk-form-icon-flip uk-icon-image"
+            style="background-image: url(../../../../assets/img/eye-hover.png);" (click)="setPassToText()"></a>
+          <input [(ngModel)]="clave" class="uk-input fix-input" [type]="passText" placeholder="Contraseña">
+        </div>
+      </div>
+
+      <button class="uk-button uk-button-secondary" (click)="signIn()">Ingresar al Panel</button>
+
+      <p class="password">
+        <a href="#modal-sections" uk-toggle>
+          ¿Has olvidado la contraseña?
+        </a>
+      </p>
+
+    </div>
+    <div class="login-footer uk-text-center">
+      <p>Master Travel - Copyright &copy; 2019</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="spinner" class="spinner-bg uk-text-center">
+  <div uk-spinner="ratio: 2"></div>
+</div>
+
+<div id="modal-sections" uk-modal>
+  <div class="uk-modal-dialog uk-margin-auto-vertical">
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Recuperación de Contraseña</h2>
+    </div>
+    <div class="uk-modal-body uk-text-center">
+      <p>Se enviará un link a tu correo para el cambio de contraseña. Introduce el correo de recuperación a
+        continuación:</p>
+      <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="Correo Electrónico" style="max-width: 250px;text-align: center;">
+      </div>
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-primary" type="button"
+        style="margin-right: 8px; min-width: 139px;">Enviar</button>
+      <button class="uk-button uk-button-default uk-modal-close" type="button"
+        style="min-width: 139px;">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<app-panel *ngIf="autenticado"></app-panel>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.phone-container {
+  margin-top: -100px;
+  margin-bottom: -100px;
+  width: 100%;
+  text-align: center;
+  transform: scale(.7);
+}
+
+.text-social-container {
+  position: relative;
+}
+
+.text-social-networks {
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  width: 80%;
+  transform: translate(-45%, -45%);
+  -moz-transform: translate(-45%, -45%);
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0px 7px 9px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 9px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 9px -1px rgba(0, 0, 0, 0.75);
+}
+
+.text-social-networks img {
+  width: 30%;
+}
+
+.title-social-networks {
+  font-family: 'Calistoga', cursive;
+}
+
+@media (max-width: 960px) {
+  .phone-frame-desktop {
+    display: none;
+  }
+
+  .phone-container {
+    margin-top: -150px;
+  }
+
+  .p-social-networks {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title-social-networks {
+    font-size: 2rem;
+  }
+
+  .phone-container {
+    margin-left: -2vh;
+  }
+}
+
+@media (min-width: 961px) {
+  .phone-frame-mobile {
+    display: none;
+  }
+}
+
+.follow {
+  position: absolute;
+  top: 126px;
+  left: 121px;
+  width: 197px;
+  height: 29px;
+  transition: background-color ease-in-out .3s;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.follow:hover {
+  background-color: rgba(255, 255, 255, .3);
+}

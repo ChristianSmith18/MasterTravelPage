@@ -1,0 +1,157 @@
+<nav class="uk-navbar-container navbar-desktop" uk-navbar="boundary-align: true; align: center;">
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <li>
+        <a href="/home">
+          <div class="uk-animation-toggle" tabindex="0">
+            <div class="uk-animation-fade">
+              <img class="logo" src="../../../assets/img/logo/logo_mastertravel.jpeg" alt="Logotipo">
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <li [ngClass]="{'uk-active': (pathname === 'home' || pathname === '')}">
+        <a href="/home">
+          <div class="uk-animation-slide-top">
+            <span class="navbar-text">Home</span>
+          </div>
+        </a>
+      </li>
+      <li [ngClass]="{'uk-active': (pathname === 'catalogo')}">
+        <a href="/catalogo">
+          <div class="uk-animation-slide-bottom">
+            <span class="navbar-text">Catálogo</span>
+          </div>
+        </a>
+      </li>
+      <li [ngClass]="{'uk-active': (pathname === 'otros-destinos')}">
+        <a href="/otros-destinos">
+          <div class="uk-animation-slide-top">
+            <span class="navbar-text">Otros Destinos</span>
+          </div>
+        </a>
+      </li>
+      <li [ngClass]="{'uk-active': (pathname === 'salidas-confirmadas')}">
+        <a href="/salidas-confirmadas">
+          <div class="uk-animation-slide-bottom">
+            <span class="navbar-text">Salidas Confirmadas</span>
+          </div>
+        </a>
+      </li>
+      <li [ngClass]="{'uk-active': (pathname === 'contacto')}">
+        <a href="/contacto">
+          <div class="uk-animation-slide-top">
+            <span class="navbar-text">Contacto</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="uk-navbar-right social-network">
+    <ul class="uk-navbar-nav">
+      <li>
+        <div class="uk-animation-scale-down">
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="facebook"
+            uk-tooltip="title: Síguenos en Facebook; pos: bottom; animation: uk-animation-slide-bottom"
+            (click)="addFacebook()"></a>
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="twitter"
+            uk-tooltip="title: Síguenos en Twitter; pos: bottom; animation: uk-animation-slide-bottom"
+            (click)="addTwitter()"></a>
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="instagram"
+            uk-tooltip="title: Síguenos en Instagram; pos: bottom; animation: uk-animation-slide-bottom"
+            (click)="addInstagram()"></a>
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="whatsapp"
+            uk-tooltip="title: Resolverémos tus dudas; pos: bottom; animation: uk-animation-slide-bottom"
+            (click)="addWhatsapp()"></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="uk-navbar-right">
+    <ul class="uk-navbar-nav">
+      <li>
+        <a href="#">
+          <div class="uk-animation-slide-right">
+            <button class="uk-button uk-button-primary mesa-central">
+              <span class="navbar-text">Mesa Central: + 56 2 99999999</span>
+            </button>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<nav class="uk-navbar-container navbar-mobile" uk-navbar="boundary-align: true; align: center;">
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <li>
+        <a href="/home">
+          <div class="uk-animation-slide-left">
+            <img class="logo" src="../../../assets/img/logo/logo_mastertravel.jpeg" alt="Logotipo">
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="uk-navbar-right">
+    <ul class="uk-navbar-nav">
+      <li>
+        <div class="uk-animation-scale-down">
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="facebook" (click)="addFacebook()"></a>
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="twitter" (click)="addTwitter()"></a>
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="instagram" (click)="addInstagram()"></a>
+          <a href="#" target="_blank" class="uk-icon-button" uk-icon="whatsapp" (click)="addWhatsapp()"></a>
+          <div class="uk-animation-slide-right menu-large" style="float: right;">
+            <span class="button-menu" uk-icon="icon: menu; ratio: 1.5" uk-toggle="target: #offcanvas-push"></span>
+            <span style="margin-left: 10px;">Menú</span>
+          </div>
+          <span class="uk-animation-slide-right button-menu menu-short" uk-icon="icon: menu; ratio: 1.5"
+            uk-toggle="target: #offcanvas-push"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+  <div class="uk-offcanvas-bar">
+
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+    <h3>Menú</h3>
+
+    <ul class="uk-list uk-list-divider">
+      <li>
+        <span style="cursor: pointer;" [ngClass]="{'active': (pathname === 'home' || pathname === '')}"
+          (click)="setUrl('home')">Home</span>
+      </li>
+      <li>
+        <span style="cursor: pointer;" [ngClass]="{'active': (pathname === 'catalogo')}"
+          (click)="setUrl('catalogo')">Catálogo</span>
+      </li>
+      <li>
+        <span style="cursor: pointer;" [ngClass]="{'active': (pathname === 'otros-destinos')}"
+          (click)="setUrl('otros-destinos')">Otros Destinos</span>
+      </li>
+      <li>
+        <span style="cursor: pointer;" [ngClass]="{'active': (pathname === 'salidas-confirmadas')}"
+          (click)="setUrl('salidas-confirmadas')">Salidas Confirmadas</span>
+      </li>
+      <li>
+        <span style="cursor: pointer;" [ngClass]="{'active': (pathname === 'contacto')}"
+          (click)="setUrl('contacto')">Contacto</span>
+      </li>
+    </ul>
+
+  </div>
+</div>

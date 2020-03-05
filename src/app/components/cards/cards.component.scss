@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
+
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+
+.img-loader {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: #bebebe;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  [uk-spinner="ratio: 2"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+  }
+}
+
+img[data-src][src*='data:image'] {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#card-contenedor {
+  padding-left: 45px !important;
+  padding-right: 45px !important;
+}
+
+.banner-img,
+.hexagono-img {
+  position: absolute;
+  width: 15%;
+  top: 6px;
+  right: 6px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.hexagono-number {
+  position: absolute;
+  font-weight: bold;
+  top: -2px;
+  right: 11px;
+  cursor: pointer;
+  font-size: 2vh;
+}
+
+.uk-card-media-top {
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.uk-card-media-top img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.uk-card {
+  border-radius: 1rem;
+  transition: all ease-in-out .3s;
+}
+
+.uk-card-body {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+img.img-card {
+  transition: transform ease-in-out .6s;
+}
+
+.uk-card:hover {
+  -webkit-box-shadow: 4px 4px 29px -5px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 4px 4px 29px -5px rgba(0, 0, 0, 0.85);
+  box-shadow: 4px 4px 29px -5px rgba(0, 0, 0, 0.85);
+  img.img-card {
+    transform: scale(1.3);
+  }
+}
+
+.title-card {
+  font-size: .8rem;
+}
+
+.subtitle-card {
+  font-size: .9rem;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.title-description {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+  font-size: 2.3rem;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.description {
+  ul li {
+    text-align: left;
+  }
+
+  font-size: 1rem;
+}
+
+.uk-button-small {
+  border-radius: 1rem;
+}
+
+@media (max-width: 650px) {
+  .uk-background-cover {
+    min-height: 65vh !important;
+  }
+}
+
+.uk-modal-close-full-fix {
+  padding: 15px;
+  border-radius: 2rem;
+}
+
+.details-button {
+  transition: all ease-in-out .4s;
+}
+
+.details-button:hover {
+  background-color: #f8f8f8;
+}

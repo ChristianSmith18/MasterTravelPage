@@ -1,0 +1,119 @@
+<ul class="uk-flex-center" uk-tab uk-switcher>
+  <li class="uk-active"><a href="#">Todos</a></li>
+  <li><a href="#">Sudamérica</a></li>
+</ul>
+<div class="uk-switcher uk-margin">
+  <li>
+    <div id="card-contenedor"
+      class="uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l"
+      uk-grid="parallax: 100" uk-scrollspy="cls: uk-animation-scale-up; target: .uk-card; delay: 500; repeat: false">
+      <div *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+        <div class="uk-card uk-card-default">
+          <img *ngIf="true" class="banner-img" src="../../../assets/img/banner.svg" alt=""
+            uk-tooltip="title: Paquete Estrella; pos: right; animation: uk-animation-slide-left-small">
+          <div *ngIf="false" class="">
+            <img class="hexagono-img" src="../../../assets/img/hexagono.svg" alt="">
+            <p class="hexagono-number"
+              uk-tooltip="title: Paquete con descuento; pos: right; animation: uk-animation-slide-left-small">-17%</p>
+          </div>
+          <div class="uk-card-media-top">
+            <div *ngIf="!iosDevice" [id]="'spinner-'+i" class="img-loader">
+              <div uk-spinner="ratio: 2"></div>
+
+            </div>
+            <img *ngIf="iosDevice" class="img-card" src="../../../assets/img/cards/islas.jpg" alt="">
+            <img *ngIf="!iosDevice" class="img-card" src="../../../assets/img/cards/islas.jpg" alt=""
+              style="display: none;" (load)="onImageLoad($event, 'spinner-'+i)">
+          </div>
+          <div class="uk-card-body">
+            <h2 class="title-card uk-text-center">Aruba 08 Días – 07 Noches (Salidas Confirmadas Verano 2020)</h2>
+            <h3 class="subtitle-card uk-text-center">Precio desde: $2,103,000</h3>
+            <a class="uk-button uk-button-default uk-align-center uk-button-small details-button" href="#modal-full"
+              uk-toggle>Ver
+              detalles</a>
+          </div>
+          <div id="modal-full" class="uk-modal-full uk-animation-slide-top" uk-modal>
+            <div class="uk-modal-dialog">
+              <button class="uk-modal-close-full uk-close-large uk-modal-close-full-fix" type="button"
+                uk-close></button>
+              <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                <!-- <div class="uk-background-cover"
+                  style="background-image: url('../../../assets/img/cards/islas.jpg');" uk-height-viewport>
+                </div> -->
+
+                <div class="uk-background-cover" uk-height-viewport>
+
+                  <div class="uk-position-relative uk-visible-toggle uk-light img-card-details" tabindex="-1"
+                    uk-slideshow>
+
+                    <ul class="uk-slideshow-items">
+                      <li>
+                        <img src="../../../assets/img/cards/islas.jpg" alt="" uk-cover>
+                      </li>
+                      <li>
+                        <img src="../../../assets/img/cards/islas.jpg" alt="" uk-cover>
+                      </li>
+                      <li>
+                        <img src="../../../assets/img/cards/islas.jpg" alt="" uk-cover>
+                      </li>
+                    </ul>
+
+                    <!-- <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                      uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                      uk-slideshow-item="next"></a> -->
+
+                  </div>
+
+                </div>
+
+                <div class="uk-padding-large">
+                  <div class="uk-animation-fade uk-text-justify description">
+                    <p class="uk-animation-scale-up uk-text-center title-description">Paquete Incluye</p>
+                    <ul>
+                      <li>
+                        Pasajes aéreos Santiago / Cancun / Santiago.
+                      </li>
+                      <li>
+                        Traslados Aeropuerto / Hotel Cancun / Aeropuerto *Servicio Regular*
+                      </li>
+                      <li>
+                        Hotel a elección *Sistema Todo Incluido*
+                      </li>
+                      <li>
+                        Maletas de 8 y 23 kilos.
+                      </li>
+                      <li>
+                        Impuestos Aéreos.
+                      </li>
+                      <li>
+                        Impuestos Hoteleros.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div id="card-contenedor"
+      class="uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l"
+      uk-grid="parallax: 50" uk-scrollspy="cls: uk-animation-scale-up; target: .uk-card; delay: 500; repeat: false">
+      <div *ngFor="let item of [1,1,1,1,1,1]">
+        <div class="uk-card uk-card-default">
+          <div class="uk-card-media-top">
+            <img src="../../../assets/img/cards/casas.jpg" alt="">
+          </div>
+          <div class="uk-card-body">
+            <h3 class="title-card uk-text-center">Media Top</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>

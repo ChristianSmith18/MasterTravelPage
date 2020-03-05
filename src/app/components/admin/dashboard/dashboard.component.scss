@@ -1,0 +1,185 @@
+a {
+  text-decoration: none;
+}
+
+.uk-card {
+  border-radius: 1.2rem;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+  max-width: 100vw !important;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+.uk-card-0 {
+  background-color: #1e87f0;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-0:hover {
+  background-color: rgb(30, 135, 240, .7);
+}
+
+.uk-card-1 {
+  background-color: #2CDE4C;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-1:hover {
+  background-color: rgba(44, 222, 77, 0.7);
+}
+
+.uk-card-2 {
+  background-color: #f1c40f;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-2:hover {
+  background-color: rgb(241, 196, 15, .7);
+}
+
+.uk-card-3 {
+  background-color: #CACFD2;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-3:hover {
+  background-color: rgb(202, 207, 210, .7);
+}
+
+.uk-card-4 {
+  background-color: #A04000;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-4:hover {
+  background-color: rgb(160, 64, 0, .7);
+}
+
+.uk-card-insta {
+  background-color: #c32aa3;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-insta:hover {
+  background-color: rgb(195, 42, 163, .7);
+}
+
+.uk-card-face {
+  background-color: #3b5998;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-face:hover {
+  background-color: rgb(59, 89, 152, .7);
+}
+
+.uk-card-twit {
+  background-color: #1da1f2;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-twit:hover {
+  background-color: rgb(29, 161, 242, .7);
+}
+
+.uk-card-whats {
+  background-color: #25d366;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-whats:hover {
+  background-color: rgb(37, 211, 102, .7);
+}
+
+.uk-card-panic {
+  background-color: #e01f1f;
+
+  h3 {
+    color: #fff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, .8)
+  }
+}
+
+.uk-card-panic:hover {
+  background-color: rgb(224, 31, 31, .7);
+}
+
+.card-panic {
+  padding: 40px 250px;
+}
+
+@media(max-width: 850px) {
+  .card-panic {
+    padding: 0;
+    margin-top: 10px;
+  }
+}

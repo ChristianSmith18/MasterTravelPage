@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+p,
+h3 {
+  color: white;
+}
+
+.a-black {
+  color: black;
+}
+
+.a-black:hover {
+  color: #666666;
+}
+
+h3 {
+  font-family: 'Calistoga', cursive;
+  margin-bottom: -15px;
+}
+
+p {
+  font-size: .9rem;
+}
+
+.bg-darker {
+  background-color: #474E5B;
+}
+
+.footer {
+  padding-top: 15px !important;
+}
+
+.no-m-p {
+  margin: 0;
+  padding: 0;
+}
+
+.autor-div {
+  margin-top: -14px;
+}
+
+p.autor {
+  margin-bottom: 8px !important;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 1.2rem;
+  -webkit-user-select: none;
+}
+
+p.autor a {
+  transition: all ease-in-out .3s;
+  color: #08a0b4;
+}
+
+p.autor a:hover {
+  color: #08a0b4;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  p.autor a {
+    color: #08a0b4;
+  }
+}
+
+[uk-icon="uikit"] {
+  background-color: #3399ff;
+  color: #fff !important;
+  margin-left: 5px;
+}
+
+[uk-icon="uikit"]:hover {
+  background-color: #33b4ff;
+}
+
+.newsletter-input {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+.fix-div {
+  padding-top: 4px;
+  margin-bottom: -18px;
+}
+
+p.redes-sociales {
+  margin-top: 10px;
+  font-family: 'Calistoga', cursive;
+  font-size: 1.2rem;
+}
+
+a.uk-icon-button {
+  margin-right: 5px;
+}
+
+a.uk-icon-button:last-child {
+  margin-right: 0;
+}
+
+[uk-icon="facebook"],
+[uk-icon="twitter"],
+[uk-icon="instagram"],
+[uk-icon="whatsapp"] {
+  transition: color ease-in-out .3s;
+}
+
+
+[uk-icon="facebook"]:hover {
+  color: #3b5998;
+}
+
+[uk-icon="twitter"]:hover {
+  color: #1da1f2;
+}
+
+[uk-icon="instagram"]:hover {
+  color: #c32aa3;
+}
+
+[uk-icon="whatsapp"]:hover {
+  color: #25d366;
+}
+
+@media (min-width: 961px) {
+  .hr-sep-sn {
+    display: none;
+  }
+}
+
+.icon-location {
+  margin-right: 15px !important;
+  color: #fff;
+}
+
+.text-info {
+  font-size: .8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .text-info {
+    text-align: center;
+  }
+}
+
+.text-info:hover {
+  color: rgba(255, 255, 255, .7);
+  span {
+    color: rgba(255, 255, 255, .7);
+  }
+}

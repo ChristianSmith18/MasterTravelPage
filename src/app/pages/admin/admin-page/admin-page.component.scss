@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.login-bg {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  width: 60vh;
+  height: 80vh;
+  background-color: #3399ff;
+  border-radius: 1.2rem;
+  -webkit-box-shadow: 3px 6px 23px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 6px 23px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 6px 23px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 960px) {
+  .login-bg {
+    width: 50vh;
+  }
+}
+
+@media (max-width: 380px) {
+  .login-bg {
+    height: 80vh;
+  }
+}
+
+.login-title {
+  width: 100%;
+  height: 30%;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+
+  h1 {
+    padding-top: 7vh;
+    font-family: 'Calistoga', cursive;
+    color: #fff;
+  }
+}
+
+.login-inputs {
+  width: 100%;
+  height: 50%;
+  padding-top: 5vh;
+}
+
+.uk-input,
+.uk-button {
+  border-radius: 1.2rem;
+}
+
+.uk-input.error-login {
+  border: 2px red solid;
+}
+
+p.password a {
+  color: #fff;
+  cursor: pointer;
+  transition: color ease-in-out .1s;
+  text-decoration: none;
+}
+
+p.password a:hover {
+  color: rgba(0, 0, 0, .4);
+  text-decoration: underline;
+}
+
+.login-footer {
+  padding-top: 5vh;
+  width: 100%;
+  height: 12%;
+
+  p {
+    font-family: 'Calistoga', cursive;
+    color: #fff;
+  }
+}
+
+.fix-input {
+  max-width: 243px;
+}
+
+a.uk-icon-image {
+  top: 10px !important;
+  filter: grayscale(.9);
+  transition: background-image ease-in-out .3s;
+}
+
+a.uk-icon-image:hover {
+  background-image: url(../../../../assets/img/eye.png) !important;
+}

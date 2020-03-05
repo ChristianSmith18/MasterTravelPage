@@ -28,9 +28,17 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/uikit.min.css",
+              "src/assets/css/devices.min.css",
+              "src/assets/css/mapbox-gl.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/uikit.min.js",
+              "src/assets/js/uikit-icons.min.js",
+              "src/assets/js/mapbox-sdk.min.js",
+              "src/assets/js/fontawesome.js"
+            ]
           },
           "configurations": {
             "production": {

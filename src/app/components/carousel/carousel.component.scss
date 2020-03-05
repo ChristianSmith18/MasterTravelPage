@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point:700&display=swap');
+
+.contenedor-carousel-one,
+.contenedor-carousel-two {
+  position: relative;
+
+  svg {
+    position: absolute;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 451px) {
+  .contenedor-carousel-one {
+    display: none;
+  }
+}
+
+@media (min-width: 450px) {
+  .margin-left {
+    margin-left: 100px;
+  }
+
+  .contenedor-carousel-two {
+    display: none;
+  }
+
+  [uk-slideshow-item="previous"],
+  [uk-slideshow-item="next"] {
+    background-color: #00000080;
+    color: white;
+    border-radius: 1.2rem;
+  }
+
+  [uk-slideshow-item="previous"]:hover,
+  [uk-slideshow-item="next"]:hover {
+    background-color: #000000b3;
+  }
+}
+
+.uk-text-center {
+
+  h2,
+  p {
+    user-select: none;
+    -moz-user-select: none;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: 'Calistoga', cursive;
+    color: #fff;
+    font-size: 4.5rem;
+  }
+
+  p {
+    font-weight: bold;
+    font-family: 'Sulphur Point', sans-serif;
+    color: #ffffffe6;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .uk-text-center {
+
+    h2,
+    p {
+      text-align: center;
+      max-width: 350px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+li {
+  cursor: move;
+}

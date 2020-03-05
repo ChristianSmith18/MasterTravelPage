@@ -1,0 +1,52 @@
+<navbar></navbar>
+
+<a id="button-up" href="#" class="uk-icon-button uk-animation-slide-right" uk-icon="chevron-up"
+  uk-scroll="duration: 700"></a>
+
+<a id="whatsapp-phone" href="" class="uk-icon-button uk-animation-slide-left" uk-icon="whatsapp"
+  uk-tooltip="title: ¿Tienes dudas? Hablemos; pos: right; delay: 300"></a>
+
+
+<div class="contenedor-card">
+  <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+    <h1 class="uk-text-center heading-contacto">Contacto</h1>
+    <h1 class="uk-heading-line uk-text-center"><span class="subtitle">CONTÁCTANOS PARA CUALQUIER PREGUNTA</span></h1>
+    <div class="uk-grid-small uk-child-width-1-2@s uk-flex-center uk-text-center" uk-grid>
+      <div>
+        <div class="uk-margin">
+          <input id="name" [(ngModel)]="name" class="uk-input uk-form-width-large" type="text"
+            placeholder="Tu nombre (*)" tabindex="1">
+        </div>
+
+        <div class="uk-margin">
+          <input id="mail" [(ngModel)]="mail" class="uk-input uk-form-width-large" type="email"
+            placeholder="Tu email (*)" tabindex="2">
+        </div>
+
+        <div class="uk-margin">
+          <input id="mobile" [(ngModel)]="mobile" class="uk-input uk-form-width-large" type="text" maxlength="10"
+            placeholder="Número telefónico (*)" tabindex="3">
+        </div>
+
+        <div class="uk-margin">
+          <input id="enterprise" [(ngModel)]="enterprise" class="uk-input uk-form-width-large" type="text"
+            placeholder="Empresa" tabindex="4">
+        </div>
+      </div>
+      <div>
+        <div class="uk-margin">
+          <textarea id="msg" [(ngModel)]="msg" class="uk-textarea uk-form-width-large" type="text"
+            placeholder="Tu mensaje (*)" maxlength="400" tabindex="5"></textarea>
+          <p id="message-char">{{ msg.length }}/400</p>
+        </div>
+      </div>
+    </div>
+    <div class="uk-text-center uk-margin-medium-top">
+      <button class="uk-button uk-button-primary" (click)="validateAll()" tabindex="6">Hacer pregunta</button>
+    </div>
+  </div>
+</div>
+
+<map></map>
+
+<app-footer></app-footer>

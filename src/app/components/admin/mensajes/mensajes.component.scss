@@ -1,0 +1,88 @@
+.name,
+.email {
+  float: left;
+}
+
+.date,
+.phone {
+  float: right;
+}
+
+p {
+  text-align: justify;
+}
+
+.uk-card {
+  border-radius: 1.2rem;
+  // margin: 2px;
+  min-width: 25vw;
+  max-width: 100%;
+}
+
+.uk-card-header {
+  padding: 15px;
+}
+
+.uk-card-footer {
+  padding: 15px 10px;
+}
+
+.uk-card-body {
+  padding: 8px 10px;
+}
+
+@media (max-width: 768px) {
+  .uk-card {
+    min-width: 0px;
+  }
+}
+
+.uk-card-title {
+  font-size: 1.4rem;
+}
+
+.uk-card-footer {
+  font-size: .9rem;
+}
+
+button {
+  border-radius: 1.2rem;
+}
+
+.uk-modal-footer {
+  button {
+    margin-right: 5px;
+  }
+}
+
+.circle-red {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  background-color: #F51C05;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color ease-in-out .4s;
+}
+
+.circle-red:hover {
+  background-color: #2a95f9;
+}
+
+@media (max-width: 618px) {
+  #unReadBtn {
+    display: none;
+  }
+}
+
+.wea {
+  background-color: red;
+  width: 80vw;
+  width: calc(100vw - 270px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+}

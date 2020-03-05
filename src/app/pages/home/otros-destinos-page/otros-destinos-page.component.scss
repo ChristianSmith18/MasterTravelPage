@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+
+.heading-container {
+  background-color: #292929;
+  height: 150px;
+}
+
+h1 span {
+  top: 5vh;
+  margin-bottom: 30px;
+  font-size: 3.6rem;
+  font-family: 'Calistoga', cursive;
+  color: #fff;
+}
+
+@media (max-width: 450px) {
+  h1 span {
+    font-size: 2.6rem;
+    top: 7vh;
+    margin-bottom: 45px;
+  }
+}
